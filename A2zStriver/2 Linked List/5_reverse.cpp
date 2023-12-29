@@ -62,8 +62,8 @@ node *recursiveReversal(node *&head)
     if (head == NULL || head->next == NULL)
         return head;
     node *newHead = recursiveReversal(head->next);
-    node *front=head->next;
-    front->next= head;
+    node *front = head->next;
+    front->next = head;
     head->next = NULL;
     return newHead;
 }
@@ -103,6 +103,6 @@ int main()
     // display(reverse);
     // node *reverse2 = reversalBruteForce(head);
     // display(reverse2);
-    node * reverseRecursive = recursiveReversal(head);
+    node *reverseRecursive = recursiveReversal(head);
     display(reverseRecursive);
 }
